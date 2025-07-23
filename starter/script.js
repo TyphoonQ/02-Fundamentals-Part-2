@@ -36,7 +36,7 @@ const appleOrnageJuice = fruitProcessor(2, 4);
 console.log(appleOrnageJuice);
 
 const num = Number('23');
-*/
+
 
 function describeCountry(country, population, capitalCity) {
     console.log(country, population, capitalCity);
@@ -49,3 +49,22 @@ const descGermany = describeCountry('Germany', 83, 'Berlin');
 const descFinland = describeCountry('Finland', 6, 'Helsinki');
 
 console.log(descPortugal, descGermany, descFinland);
+*/
+
+// 35 Function Decleration vs. Expressions
+// Function declaration
+function calcAge1(birthYear) {
+    const age = 2037 - birthYear;
+    return age;
+}
+
+const age1 = calcAge1(1991);
+console.log(age1);
+
+// Function Expression
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear;
+}
+const age2 = calcAge2(1991);
+
+console.log(age1, age2);
