@@ -124,7 +124,7 @@ function fruitProcessor(apples, oranges) {
     return juice;
 }
 console.log(fruitProcessor(2, 3));
-*/
+
 function percentageOfWorld1(population) {
     return (population / 7900) * 100;
 }
@@ -137,3 +137,28 @@ const describePopulation = function (country, population) {
 describePopulation('Portugal', 10);
 describePopulation('China', 1441);
 describePopulation('USA', 332);
+
+*/
+// 38 Reviewing Functions
+
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+    const age = calcAge(birthYear);
+    const retirement = 65 - age;
+
+    if (retirement > 0) {
+        console.log(`${firstName} retires in ${retirement} years`);
+        return retirement;
+    } else {
+        console.log(`${firstName} retires in ${retirement} years`);
+        return -1;
+    }
+
+    // return retirement
+    // return `${firstName} retires in ${retirement} years`;
+}
+console.log(yearsUntilRetirement(1991, 'Jonas'));
+console.log(yearsUntilRetirement(1950, 'Mike'));
