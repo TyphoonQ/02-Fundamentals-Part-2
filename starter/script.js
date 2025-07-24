@@ -100,3 +100,10 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1980, 'Bob'));
+
+const percentageOfWorld3 = population => (population / 7900) * 100
+const percPortugal1 = percentageOfWorld3(10);
+const percChina1 = percentageOfWorld3(1441);
+const percUSA1 = percentageOfWorld3(332);
+
+console.log(percPortugal1, percChina1, percUSA1);
