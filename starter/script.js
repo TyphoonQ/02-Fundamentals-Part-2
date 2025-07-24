@@ -49,7 +49,7 @@ const descGermany = describeCountry('Germany', 83, 'Berlin');
 const descFinland = describeCountry('Finland', 6, 'Helsinki');
 
 console.log(descPortugal, descGermany, descFinland);
-*/
+
 
 // 35 Function Decleration vs. Expressions
 // Function declaration
@@ -82,3 +82,21 @@ const percChina1 = percentageOfWorld1(1441);
 const percUSA1 = percentageOfWorld1(332);
 
 console.log(percPortugal1, percChina1, percUSA1);
+*/
+
+// 36 Arrow Functions
+
+// Arrow Function
+const calcAge3 = birthYear => 2037 - birthYear;
+const age3 = calcAge3(1991);
+console.log(age3);
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+    const age = 2037 - birthYear;
+    const retirement = 65 - age;
+    // return retirement
+    return `${firstName} retires in ${retirement} years`;
+}
+
+console.log(yearsUntilRetirement(1991, 'Jonas'));
+console.log(yearsUntilRetirement(1980, 'Bob'));
