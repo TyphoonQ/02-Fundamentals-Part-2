@@ -205,7 +205,7 @@ scoreKoalas = calcAverage(23, 34, 27);
 console.log(scoreDolphins, scoreKoalas)
 checkWinner(scoreDolphins, scoreKoalas);
 
-*/
+
 // 40 Intro to Arrays
 const friend1 = 'Michael';
 const friend2 = 'Steven';
@@ -242,3 +242,17 @@ console.log(age1, age2, age3);
 
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])]
 console.log(ages);
+
+*/
+const populations = [10, 1441, 332, 83];
+
+console.log(populations.length === 4);
+
+const percentages = [
+    percentageOfWorld1(populations[0]),
+    percentageOfWorld1(populations[1]),
+    percentageOfWorld1(populations[2]),
+    percentageOfWorld1(populations[3])
+];
+
+console.log(percentages);
