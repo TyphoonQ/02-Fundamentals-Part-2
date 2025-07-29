@@ -178,7 +178,7 @@ console.log(yearsUntilRetirement(1950, 'Mike'));
 // TEST DATA 1: Dolphins scored 44, 23, and 71. Koalas scored 65, 54, and 49.
 // TEST DATA 2: Dolphins scored 85, 54, and 41. Koalas scored 23, 34, and 27.
 
-Write your code below. Good luck! 🙂 
+Write your code below. Good luck! 🙂
 const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 
 let scoreDolphins = calcAverage(44, 23, 71);
@@ -243,7 +243,7 @@ console.log(age1, age2, age3);
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])]
 console.log(ages);
 
-*/
+
 const populations = [10, 1441, 332, 83];
 
 console.log(populations.length === 4);
@@ -256,3 +256,36 @@ const percentages = [
 ];
 
 console.log(percentages);
+*/
+
+// Basic Array Operators (Methods)
+const friends = ['Michael', 'Steve', 'Peter'];
+
+// Add elemnts
+const newLength = friends.push('Jay');
+console.log(friends);
+console.log(newLength);
+
+friends.unshift('John');
+console.log(friends);
+
+// Remove elements
+friends.pop(); // Last
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(); // First
+console.log(friends);
+
+console.log(friends.indexOf('Steve'));
+console.log(friends.indexOf('Bob'));
+
+friends.push(23);
+console.log(friends.includes('Steve'));
+console.log(friends.includes('Bob'));
+console.log(friends.includes(23));
+
+if (friends.includes('Steve')) {
+    console.log('You have a friend called Steve');
+}
