@@ -256,7 +256,7 @@ const percentages = [
 ];
 
 console.log(percentages);
-*/
+
 
 // Basic Array Operators (Methods)
 const friends = ['Michael', 'Steve', 'Peter'];
@@ -289,3 +289,19 @@ console.log(friends.includes(23));
 if (friends.includes('Steve')) {
     console.log('You have a friend called Steve');
 }
+
+*/
+const neighbours = ['Norway', 'Sweden', 'Russia'];
+
+neighbours.push('Utopia');
+console.log(neighbours);
+
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes('Germany')) {
+    console.log('Probably not a central European country :D');
+}
+
+neighbours[neighbours.indexOf('Sweden')] = 'Republic of Sweden;';
+console.log(neighbours);
