@@ -323,20 +323,30 @@ console.log(neighbours);
 // TEST DATA: 125, 555, and 44.
 
 // 1) calcTip: 15% for 50–300 (inclusive), otherwise 20%
-const calcTip = (bill) => (bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20);
+// const calcTip = (bill) => (bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20);
 
-// Quick test with 100
-console.log('Tip on 100:', calcTip(100)); // -> 15
+// // Quick test with 100
+// console.log('Tip on 100:', calcTip(100)); // -> 15
 
-// 2) Bills array (test data)
+// // 2) Bills array (test data)
+// const bills = [125, 555, 44];
+
+// // 3) Tips array (tip for each bill)
+// const tips = bills.map(calcTip);
+
+// // BONUS: 4) Totals array (bill + tip)
+// const totals = bills.map((bill, i) => bill + tips[i]);
+
+// console.log('Bills:', bills);     // [125, 555, 44]
+// console.log('Tips:', tips);       // [18.75, 111, 8.8]
+// console.log('Totals:', totals);   // [143.75, 666, 52.8]
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
 const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+console.log(bills, tips, totals);
 
-// 3) Tips array (tip for each bill)
-const tips = bills.map(calcTip);
-
-// BONUS: 4) Totals array (bill + tip)
-const totals = bills.map((bill, i) => bill + tips[i]);
-
-console.log('Bills:', bills);     // [125, 555, 44]
-console.log('Tips:', tips);       // [18.75, 111, 8.8]
-console.log('Totals:', totals);   // [143.75, 666, 52.8]
