@@ -290,7 +290,7 @@ if (friends.includes('Steve')) {
     console.log('You have a friend called Steve');
 }
 
-*/
+
 const neighbours = ['Norway', 'Sweden', 'Russia'];
 
 neighbours.push('Utopia');
@@ -305,3 +305,38 @@ if (!neighbours.includes('Germany')) {
 
 neighbours[neighbours.indexOf('Sweden')] = 'Republic of Sweden;';
 console.log(neighbours);
+
+*/
+// Coding Challenge #2
+// Steven wants you to improve his tip calculator, using the same rules as before — tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+
+// Your tasks:
+
+// Write a function calcTip that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from the first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+
+// And now let's use arrays! So, create an array called bills containing the test data below.
+
+// Create an array called tips containing the tip value for each bill, calculated from the function you created before.
+
+// BONUS: Create an array totals containing the total values, so the bill + tip.
+
+// TEST DATA: 125, 555, and 44.
+
+// 1) calcTip: 15% for 50–300 (inclusive), otherwise 20%
+const calcTip = (bill) => (bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20);
+
+// Quick test with 100
+console.log('Tip on 100:', calcTip(100)); // -> 15
+
+// 2) Bills array (test data)
+const bills = [125, 555, 44];
+
+// 3) Tips array (tip for each bill)
+const tips = bills.map(calcTip);
+
+// BONUS: 4) Totals array (bill + tip)
+const totals = bills.map((bill, i) => bill + tips[i]);
+
+console.log('Bills:', bills);     // [125, 555, 44]
+console.log('Tips:', tips);       // [18.75, 111, 8.8]
+console.log('Totals:', totals);   // [143.75, 666, 52.8]
