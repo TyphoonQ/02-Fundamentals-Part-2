@@ -349,7 +349,7 @@ const bills = [125, 555, 44];
 const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills, tips, totals);
-*/
+
 
 // 43 Intro to Objects
 const jonasArray = [
@@ -366,4 +366,13 @@ const jonas = {
     age: 2037 - 1991,
     job: 'teacher',
     friends: ['Michael', 'Peter', 'Steven']
+};
+*/
+
+const myCountry = {
+    country: 'America',
+    capital: 'Washington DC',
+    language: 'English',
+    population: '120',
+    neighbours: ['Mexico', 'Canada']
 };
